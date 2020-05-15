@@ -62,6 +62,10 @@ const presetSchema = new mongoose.Schema({
       dampning: {
         type: Number,
         required: true
+      },
+      wetDry: {
+        type: Number,
+        required: true
       }
     },
     phaser: {
@@ -76,6 +80,10 @@ const presetSchema = new mongoose.Schema({
       baseFrequency: {
         type: Number,
         required: true
+      },
+      wetDry: {
+        type: Number,
+        required: true
       }
     },
     pingPong: {
@@ -84,6 +92,10 @@ const presetSchema = new mongoose.Schema({
         required: true
       },
       feedBack: {
+        type: Number,
+        required: true
+      },
+      wetDry: {
         type: Number,
         required: true
       }
