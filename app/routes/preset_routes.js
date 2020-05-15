@@ -10,6 +10,7 @@ const customErrors = require('../../lib/custom_errors')
 
 const handle404 = customErrors.handle404
 const requireOwnership = customErrors.requireOwnership
+const removeBlanks = require('../../lib/remove_blank_fields')
 
 const requireToken = passport.authenticate('bearer', { session: false })
 
@@ -47,6 +48,22 @@ router.post('/presets', requireToken, (req, res, next) => {
     .then(preset => {
       res.status(201).json({ preset: preset.toObject() })
     })
+    .catch(next)
+})
+
+// UPDATE
+// PATCH to /presets/:id
+
+router.patch('/presets/:id', requireToken, removeBlanks, (req, res, next) => {
+  Preset.findById(req.params.id)
+    .then(handle404)
+    .then(preset => {
+      requireOwnership(req, preset)
+      console.log(preset)
+      return preset.updateOne(req.body)
+    })
+    .then(preset => (console.log(preset)))
+    .then(() => res.sendStatus(204))
     .catch(next)
 })
 
