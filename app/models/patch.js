@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const presetSchema = new mongoose.Schema({
+const patchSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -109,4 +109,4 @@ const presetSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Preset', presetSchema)
+module.exports = mongoose.model('Patch', patchSchema)
