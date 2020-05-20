@@ -1,4 +1,5 @@
 # JavaSynth API
+
   JavaSynth is a browser based synthesizer built using Tone.js and React.
 
   This is the API for the user created patches.
@@ -37,7 +38,7 @@
 ## Why MongoDB
 
   I chose to use MongoDB because of the shape of my data, The model is perfect to
-  be repersented by a JSON object. It is scalable and fast for large simple files
+  be represented by a JSON object. It is scalable and fast for large simple files
 
 ## Catalog of Routes
 
