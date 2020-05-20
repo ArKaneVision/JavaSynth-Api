@@ -3,11 +3,11 @@
 
   This is the API for the user created patches.
 
-  Users can save their synth settings so created patches that are stored in this API that
+  Users can save their synth settings and create patches that are stored in this API which was
   built using MongoDB, Mongoose, and Express.
 
-  The data storage is simple, The JSON objects in the DB are a mirror of the state that is used collectively by
-  all of the components in the synthesizer. Each is a large document with no relationship beside to the user
+  The data storage is simple, The JSON objects in the DB are a mirror of the react state that is used collectively by
+  all of the components in the synthesizer. Each is a large document with no relationship besides to the user
   who created them
 
 ## Front End
@@ -17,28 +17,27 @@
   And check out the client repo [Here](https://github.com/ArKaneVision/JavaSynth-Client)
 
 ## Technologies used
-  The back end was built with:
-    * MongoDB
-    * Mongoose
-    * Express
-    * Curl
-    * JavaScript
-    * Node.js
+  * MongoDB
+  * Mongoose
+  * Express
+  * Curl
+  * JavaScript
+  * Node.js
 
 ## Install
-  to install dependencies use ` npm install `
+  to install dependencies run ` npm install `
 
 ## Future Features
 
-  I would like to functions to the back end that agrigate stats about users
+  I would like to add functions to the back end that aggregate stats about users
   and create a social media like experience sharing synth settings.
 
-  Far future I would like to create an AI that sorts the synth settings by tone.
+  Far future I would like to create an AI that sorts the synth settings by tone types.
 
 ## Why MongoDB
 
   I chose to use MongoDB because of the shape of my data, The model is perfect to
-  be repersented by a JSON object. I is scalable and fast for last simple files
+  be repersented by a JSON object. It is scalable and fast for large simple files
 
 ## Catalog of Routes
 
