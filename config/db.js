@@ -5,7 +5,7 @@ const mongooseBaseName = 'bitcube-image'
 
 // create the mongodb uri for development and test
 const database = {
-  development: `mongodb://localhost/${mongooseBaseName}-development`,
+  development: process.env.DB || `mongodb://localhost/${mongooseBaseName}-development`,
   test: `mongodb://localhost/${mongooseBaseName}-test`
 }
 
